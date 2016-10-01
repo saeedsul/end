@@ -4,14 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cypher Marketing</title>
-    <link href="Content/bootstrap.css" rel="stylesheet" />
-    <link href="Content/font-awesome.css" rel="stylesheet" />
-    <link href="Content/sb-admin-2.css" rel="stylesheet" />
-    <link href="Content/custom.css" rel="stylesheet" />
-
-    <script src="scripts/jquery-1.10.2.js"></script>
-    <script src="scripts/jquery.validate.js"></script>
-    <script src="scripts/jquery.validate.unobtrusive.js"></script>
+    <environment names="development">
+        <link href="~/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/sb-admin-2.css" rel="stylesheet" />
+        <link href="~/css/font-awesome.css" rel="stylesheet" />
+        <link href="~/css/custom.css" rel="stylesheet" />
+    </environment>
 </head>
 <body>
     <div id="wrapper">
@@ -76,5 +74,10 @@
     <footer>
         <p>&copy; 2016 Cypher Marketing<span class="pull-right">Contact Help Desk at 555-555-1342</span></p>
     </footer>
+    <environment names="development">
+        <script src="~/js/jquery-1.10.2.js"></script>
+        <script src="~/js/jquery.validate.js"></script>
+        <script src="~/js/jquery.validate.unobtrusive.js"></script>
+    </environment>
 </body>
 </html>
