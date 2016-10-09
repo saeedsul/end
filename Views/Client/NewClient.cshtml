@@ -13,9 +13,11 @@
     {
         <div class="row">
             <div class="col-md-6">
+                @Html.ValidationSummary(false)
                 <div class="form-group">
                     @Html.LabelFor(x => x.FirstName, "First Name")
                     @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.FirstName)
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(x => x.LastName, "Last Name")
@@ -111,7 +113,7 @@
         </div>
     }
 </div>
-
+<br />
 @section Footer {
     <p>Make sure to send new clients a welcome package.</p>
 }
