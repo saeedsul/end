@@ -16,5 +16,13 @@ namespace OrderingApplication.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult NewClient(Client newClient)
+        {
+            // Save updated data to Database
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
