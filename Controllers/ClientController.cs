@@ -20,9 +20,15 @@ namespace OrderingApplication.Controllers
         [HttpPost]
         public IActionResult NewClient(Client newClient)
         {
-            // Save updated data to Database
+            if (ModelState.IsValid)
+            {
+                // Save updated data to Database
 
-            return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
+            } else
+            {
+                return View(newClient);
+            }
         }
     }
 }
