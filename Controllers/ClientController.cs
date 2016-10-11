@@ -30,5 +30,22 @@ namespace OrderingApplication.Controllers
                 return View(newClient);
             }
         }
+
+        public IActionResult VerifyEmail(string email)
+        {
+            var emailList = new List<string>()
+            {
+                "test@example.com",
+                "hello@example.com",
+                "world@example.com"
+            };
+
+            if (emailList.Contains(email))
+            {
+                return Json("Email is already taken");
+            }
+
+            return Json(true);
+        }
     }
 }

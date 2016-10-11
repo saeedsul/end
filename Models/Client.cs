@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace OrderingApplication.Models
         public string CompanyName { get; set; }
         //[Required]
         //[EmailAddress]
+        [Remote("VerifyEmail", "Client")]
         public string Email { get; set; }
         //[Required]
         public string Phone { get; set; }
