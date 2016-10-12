@@ -28,6 +28,7 @@ namespace OrderingApplication.Models
         //[Required]
         //[MaxLength(25)]
         public string Notes { get; set; }
+        public List<EmailPromo> EmailPromos { get; set; }
         public Address BillingAddress { get; set; }
         public Address MailingAddress { get; set; }
     }

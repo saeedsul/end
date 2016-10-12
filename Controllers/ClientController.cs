@@ -14,7 +14,16 @@ namespace OrderingApplication.Controllers
         // GET: /<controller>/
         public IActionResult NewClient()
         {
-            return View();
+            var newClient = new Client();
+            newClient.EmailPromos = new List<EmailPromo>()
+            {
+                new EmailPromo() { Id = 1, Title = "Weekly Deal", IsSubscribed = false },
+                new EmailPromo() { Id = 2, Title = "Holiday Promos", IsSubscribed = false },
+                new EmailPromo() { Id = 3, Title = "Company Newsletter", IsSubscribed = false },
+                new EmailPromo() { Id = 4, Title = "New Products", IsSubscribed = false }
+            };
+
+            return View(newClient);
         }
 
         [HttpPost]
@@ -25,7 +34,8 @@ namespace OrderingApplication.Controllers
                 // Save updated data to Database
 
                 return RedirectToAction("Index", "Home");
-            } else
+            }
+            else
             {
                 return View(newClient);
             }
