@@ -42,50 +42,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="panel panel-danger widget">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-comments fa-3x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
-                            <h3>Low Inventory Items</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget-display">
-                    <table class="table table-fluid table-striped">
-                        <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Inventory Count</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Hoodies</td>
-                                <td><a href="#" class="vote-up" data-userid="3">6</a></td>
-                            </tr>
-                            <tr>
-                                <td>Posters</td>
-                                <td><a href="#" class="vote-up" data-userid="1">13</a></td>
-                            </tr>
-                            <tr>
-                                <td>Table Cloths</td>
-                                <td><a href="#" class="vote-up" data-userid="4">4</a></td>
-                            </tr>
-                            <tr>
-                                <td>Flags</td>
-                                <td><a href="#" class="vote-up" data-userid="2">11</a></td>
-                            </tr>
-                            <tr>
-                                <td>Banners</td>
-                                <td><a href="#" class="vote-up" data-userid="1">14</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+           @await Component.InvokeAsync("InventoryWidget")
             <div class="panel panel-primary widget">
                 <div class="panel-heading">
                     <div class="row">
