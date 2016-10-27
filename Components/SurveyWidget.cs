@@ -8,7 +8,7 @@ namespace OrderingApplication.Components
 {
     public class SurveyWidget : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IViewComponentResult> InvokeAsync(int productId)
         {
             var products = new List<SurveyProduct>()
             {
@@ -17,6 +17,12 @@ namespace OrderingApplication.Components
                 new SurveyProduct() { Id = 3, Name = "Posters", VoteCount = 4 },
                 new SurveyProduct() { Id = 4, Name = "T-Shirts", VoteCount = 2 },
             };
+
+            if (productId > 0)
+            {
+                products.FirstOrDefault(x => x.Id == productId).VoteCount += 1;
+                return View("Results", products);
+            }
 
             return View(products);
         }
