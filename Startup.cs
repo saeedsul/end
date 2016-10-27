@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OrderingApplication.Services;
 
 namespace OrderingApplication
 {
@@ -35,7 +36,7 @@ namespace OrderingApplication
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-
+            services.AddTransient<IInventoryService, InventoryService>();
             services.AddMvc();
         }
 
