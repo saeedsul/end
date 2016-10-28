@@ -48,10 +48,21 @@
                             new SelectListItem() { Text = "Individual" },
                             new SelectListItem() { Text = "Corporation" }
                         };
+
+                        var locations = new List<SelectListItem>()
+                        {
+                            new SelectListItem() { Text = "Northeast", Value = "1" },
+                            new SelectListItem() { Text = "West", Value = "2" },
+                            new SelectListItem() { Text = "Downtown", Value = "3" },
+                            new SelectListItem() { Text = "Township", Value = "4" }
+                        };
                     }
                     @Html.DropDownListFor(x => x.ClientType, clientTypes, new { @class = "form-control" })
                 </div>
-            </div>
+                <div class="form-group">
+                    @Html.LabelFor(x => x.NearestLocation)
+                    @Html.DropDownListFor(x => x.NearestLocation, locations, new { @class = "form-control" })
+                </div>
             <div class="col-md-4">
                 @await Component.InvokeAsync("InventoryWidget", new { Threshold = 20 })
             </div>

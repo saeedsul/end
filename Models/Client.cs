@@ -25,6 +25,10 @@ namespace OrderingApplication.Models
         public DateTime? ContactDate { get; set; }
         //[Required]
         public string ClientType { get; set; }
+
+        public string NearestLocation { get; set; }
+        
+        public string MarketingMethod { get; set; }
         //[Required]
         //[MaxLength(25)]
         public string Notes { get; set; }
