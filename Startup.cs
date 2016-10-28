@@ -36,7 +36,8 @@ namespace OrderingApplication
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-            services.AddTransient<IInventoryService, InventoryService>();
+            services.AddScoped<IInventoryService, InventoryService>();
+            services.AddSingleton<ISurveyService, SurveyService>();
             services.AddMvc();
         }
 
