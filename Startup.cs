@@ -38,7 +38,7 @@ namespace OrderingApplication
             services.AddApplicationInsightsTelemetry(Configuration);
             services.AddScoped<IInventoryService, InventoryService>();
             services.AddSingleton<ISurveyService, SurveyService>();
-            services.AddSingleton<IFormDataService, JsonFormDataService>();
+            services.AddScoped<IFormDataService, JsonFormDataService>();
             services.AddMvc();
         }
 
