@@ -48,11 +48,11 @@
                     @Html.LabelFor(x => x.NearestLocation)
                     @Html.DropDownListFor(x => x.NearestLocation, FormDataHelper.GetLocations(), new { @class = "form-control" })
                 </div>
+            </div>
             <div class="col-md-4">
                 @await Component.InvokeAsync("InventoryWidget", new { Threshold = 20 })
             </div>
-        </div>
-
+            </div>
         <div class="row">
             <div class="col-md-6 form-group">
                 @Html.LabelFor(x => x.Notes)
@@ -124,7 +124,6 @@
                 <input type="submit" class="pull-right btn btn-primary" />
             </div>
         </div>
-            </div>
     }
 <br />
 @section Footer {
