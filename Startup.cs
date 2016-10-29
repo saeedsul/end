@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using OrderingApplication.Services;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 
 namespace OrderingApplication
 {
@@ -32,14 +34,19 @@ namespace OrderingApplication
         public IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
+            // MVC setup
             services.AddApplicationInsightsTelemetry(Configuration);
-            services.AddScoped<IInventoryService, InventoryService>();
-            services.AddSingleton<ISurveyService, SurveyService>();
-            services.AddScoped<IFormDataService, JsonFormDataService>();
             services.AddMvc();
+
+            // Autofac setup
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+            builder.RegisterType<InventoryService>().As<IInventoryService>();
+            builder.RegisterType<SurveyService>().As<ISurveyService>();
+            builder.RegisterType<FormDataService>().As<IFormDataService>();
+            return new AutofacServiceProvider(builder.Build());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
