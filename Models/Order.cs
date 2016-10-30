@@ -7,8 +7,20 @@ namespace OrderingApplication.Models
 {
     public class Order
     {
+        public string ClientId { get; set; }
+        public string CompanyName { get; set; }
+        public string OrderDate { get; set; }
+        public string Priority { get; set; }
+        public List<OrderProduct> Products { get; set; }
+        public string ShippingAddress { get; set; }
+        public string OrderInstructions { get; set; }
+        public string Notes { get; set; }
+    }
+
+    public class OrderProduct
+    {
+        public int Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime LastUpdated { get; set; }
+        public int Quantity { get; set; }
     }
 }

@@ -1,0 +1,64 @@
+﻿@model OrderingApplication.Models.Order
+
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Place a New Order<br />
+                <small>It's what keeps us in business!</small>
+            </h1>
+        </div>
+    </div>
+    <form id="full-page-form" asp-action="NewOrder" asp-controller="Order" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row form-group">
+                    <label class="col-xs-12">Client Id</label>
+                    <div class="col-xs-9"><input asp-for="ClientId" type="text" class="form-control" /></div>
+                    <div class="col-xs-3"><button class="btn btn-default">Lookup</button></div>
+                </div>
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input asp-for="CompanyName" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Order Date</label>
+                    <input asp-for="OrderDate" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Priority</label>
+                    <select asp-for="Priority" class="form-control">
+                        <option>Standard</option>
+                        <option>Expedited</option>
+                        <option>Urgent</option>
+                    </select>
+                </div>
+                <div class="product-list">
+                    @for(var i = 0; i < Model.Products.Count; i++)
+                    {
+                        <div class="row">
+                            <div class="col-xs-6"><label>@Model.Products[i].Name</label></div>
+                            <div class="col-xs-6"><input asp-for="@Model.Products[i].Quantity" placeholder="Quantity" type="text" class="form-control"></div>
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label>Ship To:</label><br />
+                    <select asp-for="ShippingAddress" class="form-control">
+                        <option>Billing Address</option>
+                        <option>Mailing Address</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Special Order Instructions</label>
+                    <textarea asp-for="OrderInstructions" type="text" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Additional Notes</label>
+                    <textarea asp-for="Notes" type="text" class="form-control" rows="5"></textarea>
+                </div>
+                <input type="submit" class="btn btn-primary pull-right">
+            </div>
+        </div>
+    </form>
+</div>

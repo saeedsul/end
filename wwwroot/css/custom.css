@@ -89,3 +89,12 @@ html body {
     display: inline-block;
     margin: 5px 0;
 }
+
+.product-list .row {
+	margin-bottom: 10px;
+}
+		
+.product-list {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
