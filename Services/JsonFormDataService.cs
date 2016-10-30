@@ -28,7 +28,7 @@ namespace OrderingApplication.Services
             return _srcJson.Locations.Select(x => new SelectListItem() { Text = x }).ToList();
         }
 
-        public List<OrderProduct> GetProducts()
+        public List<OrderProductVM> GetProducts()
         {
             throw new NotImplementedException();
         }

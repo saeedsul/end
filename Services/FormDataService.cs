@@ -30,16 +30,16 @@ namespace OrderingApplication.Services
             };
         }
 
-        public List<OrderProduct> GetProducts()
+        public List<OrderProductVM> GetProducts()
         {
 
-            return new List<OrderProduct>()
+            return new List<OrderProductVM>()
             {
-                new OrderProduct() { Id = 1, Name = "Hoodie" },
-                new OrderProduct() { Id = 1, Name = "T-Shirt" },
-                new OrderProduct() { Id = 1, Name = "Banner" },
-                new OrderProduct() { Id = 1, Name = "Table Cloth" },
-                new OrderProduct() { Id = 1, Name = "Streamers" }
+                new OrderProductVM() { Id = 1, Name = "Hoodie" },
+                new OrderProductVM() { Id = 1, Name = "T-Shirt" },
+                new OrderProductVM() { Id = 1, Name = "Banner" },
+                new OrderProductVM() { Id = 1, Name = "Table Cloth" },
+                new OrderProductVM() { Id = 1, Name = "Streamers" }
             };
         }
     }

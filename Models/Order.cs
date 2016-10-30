@@ -11,13 +11,13 @@ namespace OrderingApplication.Models
         public string CompanyName { get; set; }
         public string OrderDate { get; set; }
         public string Priority { get; set; }
-        public List<OrderProduct> Products { get; set; }
+        public List<OrderProductVM> Products { get; set; }
         public string ShippingAddress { get; set; }
         public string OrderInstructions { get; set; }
         public string Notes { get; set; }
     }
 
-    public class OrderProduct
+    public class OrderProductVM
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -14,14 +14,7 @@ namespace OrderingApplication.Controllers
         // GET: /<controller>/
         public IActionResult NewOrder()
         {
-            var newOrder = new Order();
-            return View(newOrder);
-        }
-
-        [HttpPost]
-        public IActionResult NewOrder(Order newOrder)
-        {
-            return RedirectToAction("Index", "Home");
+            return View();
         }
     }
 }

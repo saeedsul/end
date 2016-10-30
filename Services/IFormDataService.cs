@@ -11,6 +11,6 @@ namespace OrderingApplication.Services
     {
         List<SelectListItem> GetLocations();
         List<SelectListItem> GetClientTypes();
-        List<OrderProduct> GetProducts();
+        List<OrderProductVM> GetProducts();
     }
 }
