@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using OrderingApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace OrderingApplication.Services
     {
         List<SelectListItem> GetLocations();
         List<SelectListItem> GetClientTypes();
+        List<OrderProduct> GetProducts();
     }
 }

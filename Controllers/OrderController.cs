@@ -15,12 +15,6 @@ namespace OrderingApplication.Controllers
         public IActionResult NewOrder()
         {
             var newOrder = new Order();
-            newOrder.Products = new List<OrderProduct>()
-            {
-                new OrderProduct() { Id = 1, Name = "Hoodie", Quantity = 2 },
-                new OrderProduct() { Id = 1, Name = "T-Shirt", Quantity = 3 },
-                new OrderProduct() { Id = 1, Name = "Banner" }
-            };
             return View(newOrder);
         }
 

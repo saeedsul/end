@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using OrderingApplication.Models;
 
 namespace OrderingApplication.Services
 {
@@ -26,6 +27,19 @@ namespace OrderingApplication.Services
                 new SelectListItem() { Text = "Small Business" },
                 new SelectListItem() { Text = "Individual" },
                 new SelectListItem() { Text = "Corporation" }
+            };
+        }
+
+        public List<OrderProduct> GetProducts()
+        {
+
+            return new List<OrderProduct>()
+            {
+                new OrderProduct() { Id = 1, Name = "Hoodie" },
+                new OrderProduct() { Id = 1, Name = "T-Shirt" },
+                new OrderProduct() { Id = 1, Name = "Banner" },
+                new OrderProduct() { Id = 1, Name = "Table Cloth" },
+                new OrderProduct() { Id = 1, Name = "Streamers" }
             };
         }
     }
