@@ -36,10 +36,10 @@ namespace OrderingApplication.Services
             return new List<OrderProductVM>()
             {
                 new OrderProductVM() { Id = 1, Name = "Hoodie" },
-                new OrderProductVM() { Id = 1, Name = "T-Shirt" },
-                new OrderProductVM() { Id = 1, Name = "Banner" },
-                new OrderProductVM() { Id = 1, Name = "Table Cloth" },
-                new OrderProductVM() { Id = 1, Name = "Streamers" }
+                new OrderProductVM() { Id = 2, Name = "T-Shirt" },
+                new OrderProductVM() { Id = 3, Name = "Banner" },
+                new OrderProductVM() { Id = 4, Name = "Table Cloth" },
+                new OrderProductVM() { Id = 5, Name = "Streamers" }
             };
         }
     }
