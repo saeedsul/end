@@ -16,5 +16,11 @@ namespace OrderingApplication.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult NewOrder(Order newOrder)
+        {
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
