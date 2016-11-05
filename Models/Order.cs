@@ -10,7 +10,7 @@ namespace OrderingApplication.Models
         public string ClientId { get; set; }
         public string CompanyName { get; set; }
         public string OrderDate { get; set; }
-        public string Priority { get; set; }
+        public string Stage { get; set; }
         public List<OrderProductVM> Products { get; set; }
         public string ShippingAddress { get; set; }
         public string OrderInstructions { get; set; }
