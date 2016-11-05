@@ -13,6 +13,7 @@
     <form id="full-page-form" asp-action="NewOrder" asp-controller="Order" method="post">
         <div class="row">
             <div class="col-md-6">
+                <div asp-validation-summary="All"></div>
                 <div class="row form-group">
                     <label asp-for="ClientId" class="col-xs-12">Client Id</label>
                     <div class="col-xs-9"><input asp-for="ClientId" class="form-control" /></div>
@@ -21,6 +22,7 @@
                 <div class="form-group">
                     <label asp-for="CompanyName">Company Name</label>
                     <input asp-for="CompanyName" class="form-control" />
+                    <span asp-validation-for="CompanyName"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="OrderDate">Order Date</label>
