@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,13 +8,21 @@ namespace OrderingApplication.Models
 {
     public class Order
     {
+        [Required]
         public string ClientId { get; set; }
+        [Required]
         public string CompanyName { get; set; }
+        [Required]
         public string OrderDate { get; set; }
+        [Required]
         public string Stage { get; set; }
         public List<OrderProductVM> Products { get; set; }
+        [Required]
         public string ShippingAddress { get; set; }
+        [Required]
         public string OrderInstructions { get; set; }
+        [Required]
+        [MaxLength(25)]
         public string Notes { get; set; }
     }
 
