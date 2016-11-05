@@ -8,9 +8,9 @@ namespace OrderingApplication.Models
 {
     public class Order
     {
-        [Required]
+        [Required(ErrorMessage = "We need to know who they are!")]
         public string ClientId { get; set; }
-        [Required]
+        [Required(ErrorMessage = "The Company Name is a must!")]
         public string CompanyName { get; set; }
         [Required]
         public string OrderDate { get; set; }
