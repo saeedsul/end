@@ -42,5 +42,19 @@ namespace OrderingApplication.Services
                 new OrderProductVM() { Id = 5, Name = "Streamers" }
             };
         }
+
+        public List<SelectListItem> GetOrderStages()
+        {
+            return new List<SelectListItem>()
+            {
+                new SelectListItem() { Text = "Intake" },
+                new SelectListItem() { Text = "Inventory Fulfillment" },
+                new SelectListItem() { Text = "Billing" },
+                new SelectListItem() { Text = "Prep for Shipping" },
+                new SelectListItem() { Text = "Shipped" },
+                new SelectListItem() { Text = "Delivery Confirmation" },
+                new SelectListItem() { Text = "On Hold" }
+            };
+        }
     }
 }
