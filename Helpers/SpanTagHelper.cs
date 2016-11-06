@@ -15,7 +15,7 @@ namespace OrderingApplication.Helpers
         {
             if(LastUpdated < DateTime.Now.AddDays(-3))
             {
-                output.Attributes.SetAttribute("class", "text-danger pull-right");
+                output.Attributes.SetAttribute("class", "text-danger bold pull-right");
             }
         }
     }
