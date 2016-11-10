@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using OrderingApplication.Services;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Mvc.Razor;
+using OrderingApplication.Infrastructure;
 
 namespace OrderingApplication
 {
@@ -39,6 +41,11 @@ namespace OrderingApplication
             // MVC setup
             services.AddApplicationInsightsTelemetry(Configuration);
             services.AddMvc();
+            services.Configure<RazorViewEngineOptions>(opts =>
+            {
+                opts.ViewLocationExpanders.Clear();
+                opts.ViewLocationExpanders.Add(new ThemeExpander());
+            });
 
             // Autofac setup
             var builder = new ContainerBuilder();
