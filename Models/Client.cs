@@ -9,28 +9,26 @@ namespace OrderingApplication.Models
 {
     public class Client
     {
-        //[Required]
+        [Required]
         public string FirstName { get; set; }
-        //[Required]
+        [Required]
         public string LastName { get; set; }
-        //[Required]
+        [Required]
         public string CompanyName { get; set; }
-        //[Required]
-        //[EmailAddress]
+        [Required]
+        [EmailAddress]
         [Remote("VerifyEmail", "Client")]
         public string Email { get; set; }
-        //[Required]
+        [Required]
         public string Phone { get; set; }
-        //[Required]
+        [Required]
         public DateTime? ContactDate { get; set; }
-        //[Required]
+        [Required]
         public string ClientType { get; set; }
-
+        [Required]
         public string NearestLocation { get; set; }
-        
-        public string MarketingMethod { get; set; }
-        //[Required]
-        //[MaxLength(25)]
+        [Required]
+        [MaxLength(25)]
         public string Notes { get; set; }
         public List<EmailPromo> EmailPromos { get; set; }
         public Address BillingAddress { get; set; }
