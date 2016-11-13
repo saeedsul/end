@@ -32,6 +32,7 @@ namespace OrderingApplication.Models
         [Required]
         [MaxLength(25)]
         [DataType(DataType.MultilineText)]
+        [UIHint("MultilineTextLarge")]
         public string Notes { get; set; }
         public List<EmailPromo> EmailPromos { get; set; }
         public Address BillingAddress { get; set; }
