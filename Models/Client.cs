@@ -12,6 +12,7 @@ namespace OrderingApplication.Models
         [Required]
         public string FirstName { get; set; }
         [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Required]
         public string CompanyName { get; set; }
@@ -22,6 +23,7 @@ namespace OrderingApplication.Models
         [Required]
         public string Phone { get; set; }
         [Required]
+        [DataType(DataType.Date)]
         public DateTime? ContactDate { get; set; }
         [Required]
         public string ClientType { get; set; }
@@ -29,6 +31,7 @@ namespace OrderingApplication.Models
         public string NearestLocation { get; set; }
         [Required]
         [MaxLength(25)]
+        [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
         public List<EmailPromo> EmailPromos { get; set; }
         public Address BillingAddress { get; set; }
