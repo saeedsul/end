@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70D38206-B33F-499A-AC16-EF17BA31B5A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48BB1F7C-8EB7-41E8-BB8E-A6FE49461B77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderingApplication", "src\OrderingApplication\OrderingApplication.csproj", "{5C181B35-CD3D-430A-948A-79D9E67AD416}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C181B35-CD3D-430A-948A-79D9E67AD416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C181B35-CD3D-430A-948A-79D9E67AD416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C181B35-CD3D-430A-948A-79D9E67AD416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C181B35-CD3D-430A-948A-79D9E67AD416}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5C181B35-CD3D-430A-948A-79D9E67AD416} = {70D38206-B33F-499A-AC16-EF17BA31B5A6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54AEDECE-92E2-4BB3-B94C-707721C553A5}
+	EndGlobalSection
+EndGlobal
